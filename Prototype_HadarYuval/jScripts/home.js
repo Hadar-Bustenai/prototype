@@ -2,10 +2,10 @@
     $('#modalVideo').on('hidden.bs.modal', function (e) {
         $("#video-popup-iframe").attr("src", "");
     });
-
+    //תמונה מתחלפת בחלק העליון בהתאם לסליידר ראשי
     $("#carousel1").click(function () {
         console.log("carousel-back-1");
-        $("#topSection").css({ "background-image": "url(/images/shuka_banner.png", "background-color": "rgba(0,0,0,0.5)" });
+        $("#topSection").css("background-image", "url(/images/shuka_banner.png");
     })
 
     $("#carousel2").click(function () {
@@ -18,13 +18,13 @@
         $("#topSection").css("background-image", "url(/images/eazy_banner.png");
     })
 
-    $(".play-video").click(function (e) {
+    $(".btn-play").click(function (e) {
         //console.log(e.currentTarget.getAttribute("buttonname"))
         var buttonClicked = e.currentTarget.getAttribute("buttonname");
         console.log(buttonClicked);
         if (buttonClicked == "shuka") {
             console.log("yay");
-        $("#video-popup-iframe").attr("src", "https://player.vimeo.com/video/322019687");
+            $("#video-popup-iframe").attr("src", "https://player.vimeo.com/video/322019687");
         }
         if (buttonClicked == "batya") {
             $("#video-popup-iframe").attr("src", "https://player.vimeo.com/video/332616223"); //להחליף את הקישורים לסרטונים המתאימים
@@ -41,7 +41,35 @@
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        centerMode: true
+        centerMode: true,
+        //change - start
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+        //change - end
     });
 
 })

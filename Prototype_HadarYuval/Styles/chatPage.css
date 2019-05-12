@@ -1,6 +1,6 @@
 ﻿/****************עמוד שיחה****************/
 body {
-    font-family: Heebo;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     direction: rtl;
 }
 
@@ -63,8 +63,9 @@ header {
     font-size: 90% !important;
 }
 
-.active-chat{
-font-style: italic;
+.active-chat {
+    /*font-weight: bold;*/
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 .media-body h3 {
@@ -109,7 +110,6 @@ button.botui-actions-buttons-button:not(:last-child) {
     margin-right: 0 !important;
 }
 
-
 .botui-message-content.human {
     float: left;
     background-color: #A7B4BF;
@@ -118,6 +118,7 @@ button.botui-actions-buttons-button:not(:last-child) {
 .botui-message-content, .botui-message-content text, .botui-message-content.loading {
     float: right;
     background-color: #C9AAB5;
+    text-align: right;
 }
 
 .botui-actions-buttons-button {
@@ -129,7 +130,7 @@ button.botui-actions-buttons-button:not(:last-child) {
 }
 
 .botui-actions-text-input, .botui-message-content, .botui-message-content text, .botui-actions-buttons, .botui-actions-buttons-button, .botui-message-content.human {
-    font-family: Heebo;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     color: #333333 !important;
 }
 
@@ -140,3 +141,69 @@ button.botui-actions-buttons-button:not(:last-child) {
 /*html {
     scroll-behavior: smooth;
 }*/
+
+
+/*****media queries*****/
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    hidden-back-arrow {
+        display: inline-block;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 130%;
+        text-align: right !important;
+    }
+
+    h3 {
+        font-size: 130%;
+    }
+
+    .chat-list-bar-back-img {
+        width: 20px !important;
+    }
+
+    .chat-list-container-bot-img {
+        height: 3rem;
+    }
+
+    hidden-back-arrow {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 150%;
+        padding-right: 1rem;
+    }
+
+    h3 {
+        font-size: 150%;
+    }
+
+    hidden-back-arrow {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}

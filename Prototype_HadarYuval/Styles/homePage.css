@@ -3,29 +3,18 @@
 /*קאבר חלק עליון*/
 #topSection {
     background-image: url(/images/shuka_banner.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     margin-bottom: 8rem;
-    height: 37rem;
 }
 
 #demo {
     padding-top: 6rem;
 }
 
-/*תפריט עליון קבוע*/
-/*header {
-    font-family: Heebo;
-    width: 100%;
-    height: 80px;
-    line-height: 1.5rem;
-    display: flex;
-    text-align: center;
-    direction: rtl;
-}*/
-
-/*קרוסלה מתחלפת*/
+/*סליידר מתחלף*/
 .carousel-indicators li {
     background-color: white;
     border-radius: 50%;
@@ -47,7 +36,8 @@
 }
 
 .carousel-item {
-    text-align: right;
+    height: 6rem;
+    text-align: center;
     padding-right: 1rem;
     color: white;
     margin-top: 2rem;
@@ -55,8 +45,8 @@
 }
 
     .carousel-item p:first-child {
-        font-size: 280%;
-        word-spacing: 3px;
+        font-size: 350%;
+        word-spacing: 4px;
         line-height: 150%;
         font-weight: 200;
     }
@@ -66,14 +56,15 @@
     }
 
 /*כפתור CTA*/
-.btn-outline-dark {
+.btn-outline-dark, .btn-play {
     width: 11rem;
     background-color: #ABC933;
     border-color: #ABC933;
-    border-radius: 7px;
-    margin-top: 2.5rem;
+    border-radius: 50px;
+    margin-top: 2.5rem !important;
     color: white;
     font-weight: bold;
+    outline: none;
     -webkit-transition: all 0.3s; /* Safari */
     transition: all 0.3s;
 }
@@ -81,22 +72,44 @@
     .btn-outline-dark:hover {
         background-color: transparent;
         border-color: #ABC933;
+        -webkit-transition: all 0.3s; /* Safari */
+        transition: all 0.3s;
     }
 
-.carousel-item a:last-child {
+.btn-play {
+    background-color: transparent;
+    margin-right: 8px;
+}
+
+    .btn-play:hover {
+        color: #ABC933;
+        -webkit-transition: all 0.3s; /* Safari */
+        transition: all 0.3s;
+    }
+
+    .btn-outline-dark:focus, .btn-play:focus {
+        outline: none !important; /* למה לא עובד?????? */
+    }
+
+.far.fa-play-circle {
+    margin-left: 5px;
+}
+
+/*כפתור פלי*/
+
+/*.carousel-item a:last-child {
     display: inline-block;
     margin-right: 32%;
     margin-top: 1rem;
     position: absolute;
     color: white;
     font-size: 300%;
-    -webkit-transition: color 0.3s; /* Safari */
+    -webkit-transition: color 0.3s;
     transition: color 0.3s;
 }
-
     .carousel-item a:last-child:hover {
         color: #ABC933;
-    }
+    }*/
 
 .carousel-inner {
     height: 30rem;
@@ -128,10 +141,11 @@
 .modal-dialog {
     max-width: 760px !important;
     margin: 0 auto !important;
+    z-index: 99;
 }
 
 /*קרוסלה דמויות*/
-.container{
+.container {
     max-width: 90%;
 }
 
@@ -169,7 +183,7 @@
     margin-bottom: 3rem;
 }
 
-.tableClass{
+.tableClass {
     direction: rtl;
 }
 
@@ -191,6 +205,7 @@
     color: #333333 !important;
     display: block;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .tableClass .subject-box a:last-of-type {
@@ -205,3 +220,85 @@
     .tableClass .subject-box a:last-of-type:hover {
         border-bottom: 1px solid #ABC933;
     }
+
+
+/*****media queries*****/
+@media only screen and (max-width: 600px) {
+
+    /*קאבר חלק עליון*/
+    #topSection .container-fluid {
+        background-image: url(/images/shuka_banner.png);
+        background-repeat: no-repeat;
+        background-size: cover 10rem;
+        background-position: top center;
+        background-attachment: fixed;
+        background-position-x: -10rem;
+    }
+
+    #demo {
+        padding-top: 0;
+    }
+
+    .persona-title {
+        display: none;
+    }
+
+    .carousel-inner {
+        height: 24rem;
+    }
+
+    .carousel-item p:first-child {
+        font-size: 200%;
+    }
+
+    #topSection, .slick-slider {
+        margin-bottom: 4rem;
+    }
+
+    .slick-prev, .slick-next {
+        display: none !important;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .carousel-item p:nth-child(2) {
+        font-size: 90%;
+    }
+
+    .btn-outline-dark, .btn-play {
+        width: 9rem;
+        font-size: 90%;
+    }
+
+    h2 {
+        font-size: 180%;
+    }
+}
+
+@media (min-width: 768px) {
+    .persona-title {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .carouselSlick div p {
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 576px) {
+
+    .carouselSlick div p {
+        margin-left: 3rem;
+    }
+}

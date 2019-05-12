@@ -22,7 +22,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="jScripts/site.js"></script>
     <script src="jScripts/home.js"></script>
-    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -31,26 +30,71 @@
             <header>
                 <!-- תפריט עליון קבוע -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNavBar">
-                    <a class="navbar-brand" href="homePage.html">genChat<span class="sr-only">(current)</span></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" href="homePage.html">GenChat<span class="sr-only">(current)</span></a>
+                    <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li>
-                                <a class="nav-link" href="#chatWithH2">שיחה עם</a>
+                            <li class="mainLi">
+                                <a class="nav-link" id="changeable-link" href="#chatWithH2">שיחה עם</a>
+                                <ul class="hiddenNav">
+                                    <li>
+                                        <a class="nav-link" href="chatPage.html">שוקה</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="#">בתיה</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="#">איזי</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="#">קאסם</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="#">שרה</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="#">פרימה</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
+                            <li class="mainLi">
                                 <a class="nav-link" href="#chatAboutH2">שיחה על</a>
+                                <ul class="hiddenNav">
+                                    <li>
+                                        <a class="nav-link" href="‏‏‏‏chatAboutEmployment.html">תעסוקה</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="‏‏chatAboutRelationship.html">זוגיות ומיניות</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="chatAboutLonliness.html">בדידות</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="chatAboutSelfRealization.html">הגשמה עצמית</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="chatAboutLoss.html">אובדן</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="chatAboutFitness.html">כושר גופני</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
+                            <li class="mainLi">
                                 <a class="nav-link" href="about.html">אודות</a>
                             </li>
                         </ul>
+                        <p class="aboutNav">
+                            GenChat פותח בפקולטה לטכנולוגיות למידה
+                            <br />
+                            בשיתוף ג'וינט ישראל - אשל
+                        <p />
                     </div>
                 </nav>
             </header>
-
+            <a class="navbar-brand navbar-brand-hidden" href="homePage.html">GenChat</a>
             <!-- קרוסלה עליונה -->
             <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false" data-touch="true" data-keyboard="true">
                 <!-- Indicators -->
@@ -63,21 +107,24 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <p>חיים מלאי משמעות?<br />אפשרי בכל גיל, גם בזקנה.</p>
-                        <p>שוקה, 86 - מדריך טיולים</p>
-                        <a href="chatPage.html" class="btn btn-outline-dark" role="button" aria-pressed="true">בואו נדבר</a>
-                        <a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="shuka"></i></a>
+                        <p class="persona-title">שוקה, 86 - מדריך טיולים</p>
+                        <a href="chatPage.html" class="btn btn-outline-dark" role="button" aria-pressed="true">לשיחה עם שוקה</a>
+                        <a href="#" data-toggle="modal" data-target="#modalVideo" class="btn btn-play" role="button" aria-pressed="true" alt="לצפייה בסרטון" buttonname="shuka"><i class="far fa-play-circle"></i>לצפייה בסרטון</a>
+                        <!--<a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="shuka"></i></a>-->
                     </div>
                     <div class="carousel-item">
                         <p>חיים מלאי משמעות?<br />אפשרי בכל גיל, גם בזקנה.</p>
-                        <p> בתיה, 83 - שחקנית ורקדנית</p>
-                        <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true">בואו נדבר</a>
-                        <a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="batya"></i></a>
+                        <p class="persona-title"> בתיה, 83 - שחקנית ורקדנית</p>
+                        <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true">לשיחה עם בתיה</a>
+                        <a href="#" data-toggle="modal" data-target="#modalVideo" class="btn btn-play" role="button" aria-pressed="true" alt="לצפייה בסרטון" buttonname="batya"><i class="far fa-play-circle" buttonname="shuka"></i>לצפייה בסרטון</a>
+                        <!--<a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="batya"></i></a>-->
                     </div>
                     <div class="carousel-item">
                         <p>חיים מלאי משמעות?<br />אפשרי בכל גיל, גם בזקנה.</p>
-                        <p> איזי, 82 - פעיל בקהילה הגאה</p>
-                        <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true">בואו נדבר</a>
-                        <a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="eazy"></i></a>
+                        <p class="persona-title"> איזי, 82 - פעיל בקהילה הגאה</p>
+                        <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true">לשיחה עם איזי</a>
+                        <a href="#" data-toggle="modal" data-target="#modalVideo" class="btn btn-play" role="button" aria-pressed="true" alt="לצפייה בסרטון" buttonname="eazy"><i class="far fa-play-circle" buttonname="shuka"></i>לצפייה בסרטון</a>
+                        <!--<a href="#" data-toggle="modal" data-target="#modalVideo" alt="לצפייה בסרטון"><i class="far fa-play-circle play-video" buttonname="eazy"></i></a>-->
                     </div>
                 </div>
             </div>
@@ -167,14 +214,20 @@
     <!-- פוטר -->
     <div class="footerNavBarDiv">
         <nav id="footerNavBar">
-            <ul class="right-nav-footer m-0">
-                <li><a href="homePage.html">GenChat</a></li> |
-                <li><a href=about.html>אודות</a></li>
-            </ul>
-            <ul class="left-nav-footer m-0">
-                <li><a href="https://www.hit.ac.il/telem/overview" target="_blank"><img src="images/HIT.png" alt="קישור לאתר מכון טכנולוגי חולון - הפקולטה לטכנולוגיות למידה"/></a></li>
-                <li><a href="http://www.eshelnet.org.il/" target="_blank"><img src="images/joint-logo.png" alt="קישור לאתר אשל - ג'וינט ישראל"/></a></li>
-            </ul>
+            <div class="row no-gutters d-flex justify-content-center justify-content-md-between" style="direction:rtl;">
+                <div class="col-xs-6">
+                    <ul class="right-nav-footer m-0">
+                        <li><a href="homePage.html">GenChat</a></li> |
+                        <li><a href=about.html>אודות</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="left-nav-footer m-0">
+                        <li><a href="https://www.hit.ac.il/telem/overview" target="_blank"><img src="images/HIT.png" alt="קישור לאתר מכון טכנולוגי חולון - הפקולטה לטכנולוגיות למידה" /></a></li>
+                        <li><a href="http://www.eshelnet.org.il/" target="_blank"><img src="images/joint-logo.png" alt="קישור לאתר אשל - ג'וינט ישראל" /></a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </div>
     <!-- סרטון -->
@@ -186,9 +239,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <!--change - start-->
                 <div class="modal-body">
-                        <iframe id="video-popup-iframe" src="" width="740" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" id="video-popup-iframe" src="" width="740" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
                 </div>
+                <!--change - end-->
             </div>
         </div>
     </div>

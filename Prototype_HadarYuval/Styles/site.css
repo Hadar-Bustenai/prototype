@@ -1,5 +1,5 @@
 ﻿/*body {
-    font-family: Heebo;
+    font-family: "Segoe UI";
     direction: rtl;
 }*/
 
@@ -28,7 +28,7 @@ rgba(0, 0, 0, 0.89);
 /****************הגדרות כלליות****************/
 
 body:not(.carouselSlick.div) {
-    font-family: Heebo;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     direction: rtl;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 #container {
-    font-family: Heebo;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0 auto;
 }
 
@@ -62,6 +62,15 @@ h3 {
 }
 
 /*תפריטי ניווט*/
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*.custom-toggler.navbar-toggler {
+  border-color: rgba(255,255,255,0.5);
+}*/ 
+
 .bg-light {
     background-color: transparent !important;
     z-index: 999 !important;
@@ -75,6 +84,8 @@ h3 {
     font-weight: bold !important;
     padding: 0 !important;
     margin-left: 2rem;
+    margin-top: 1rem;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #mainNavBar {
@@ -110,6 +121,56 @@ h3 {
         clear: both;
     }
 
+/*תפריט ניווט רק במסך קטן*/
+.collapse.show {
+    text-align: right;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+}
+
+    .collapse.show navbar-nav.mr-auto li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .collapse.show navbar-nav.mr-auto a {
+        width: 1rem !important;
+    }
+
+/*אמור לבטל אנימציה בעת פתיחת תפריט המבורגר*/
+/*change - start*/
+#navbarSupportedContent.collapsing {
+    -webkit-transition: height 0.01s;
+    -moz-transition: height 0.01s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.01s;
+    transition: height 0.01s;
+    display: none;
+}
+/*change - end*/
+.aboutNav {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 80%;
+}
+
+.navbar-brand-hidden {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*ניווט משני*/
+.collapse.show li {
+    display: block !important;
+}
+
 /*רק בדף הצאט*/
 #secNavBar {
     background-color: rgba(0, 0, 0, 0.89) !important;
@@ -119,65 +180,186 @@ h3 {
 
 /*פוטר*/
 .footerNavBarDiv {
-    font-family: Heebo;
+    text-align: right;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     background-color: rgba(0, 0, 0, 0.89);
     width: 100%;
-    height: 5rem;
+    height: 100%;
 }
 
-#footerNavBar {
-    width: 100%;
+#footerNavBar ul {
+    display: inline-block;
+    direction: rtl;
+    list-style-type: none;
+    padding: 0 2rem !important;
+    color: white;
 }
 
-    #footerNavBar ul {
-        display: inline-block;
-        direction: rtl;
-        list-style-type: none;
-        padding: 0 2rem !important;
+#footerNavBar .right-nav-footer li {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+    #footerNavBar .right-nav-footer li a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        -webkit-transition: all 0.2s; /* Safari */
+        transition: all 0.2s;
     }
 
-    #footerNavBar .right-nav-footer {
-        float: right;
-    }
-
-    #footerNavBar .left-nav-footer {
-        float: left;
-    }
-
-    #footerNavBar .right-nav-footer li {
-        display: inline-block;
-        margin-top: 2rem;
-    }
-
-        #footerNavBar .right-nav-footer li a {
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            -webkit-transition: all 0.2s; /* Safari */
-            transition: all 0.2s;
+        #footerNavBar .right-nav-footer li a:hover {
+            font-weight: bold;
         }
 
-            #footerNavBar .right-nav-footer li a:hover {
-                font-weight: bold;
-            }
+#footerNavBar .left-nav-footer li {
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: left;
+}
 
-    #footerNavBar .left-nav-footer li {
+#footerNavBar .left-nav-footer a {
+    text-align: left;
+    display: inline-block;
+    width: 5rem;
+    margin-right: 2rem;
+    -webkit-transition: all 0.3s; /* Safari */
+    transition: all 0.3s;
+}
+
+    #footerNavBar .left-nav-footer a:hover {
+        opacity: 0.7;
+    }
+
+#footerNavBar .left-nav-footer img {
+    width: 100%;
+    display: inline-block;
+}
+
+#footerNavBar a[href="homePage.html"] {
+    font-weight: bold;
+}
+
+/*בלוק טקסט בדפים פנימיים*/
+.text-block {
+    margin-bottom: 6rem;
+}
+
+    .text-block p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        max-width: 700px;
+        text-align: right !important;
+    }
+
+/*****media queries*****/
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-brand-hidden {
         display: inline-block;
+    }
+
+    .mainLi {
         margin-top: 1rem;
     }
 
+        .mainLi > a {
+            font-weight: bold !important;
+        }
+
+    .hiddenNav, .aboutNav {
+        display: block;
+    }
+
+        .hiddenNav li {
+            display: block;
+        }
+
+    .footerNavBarDiv {
+        text-align: center;
+        height: 8rem;
+    }
+
     #footerNavBar .left-nav-footer a {
-        display: inline-block;
-        width: 5rem;
-        padding: 10px;
+        margin-bottom: 0.5rem;
+        width: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        display: none;
     }
 
-    #footerNavBar .left-nav-footer img {
-        width: 100%;
+    .navbar-brand-hidden {
         display: inline-block;
     }
 
-    #footerNavBar a[href="homePage.html"] {
-        font-weight: bold;
+    .mainLi {
+        margin-top: 1rem;
     }
+
+    .hiddenNav, .aboutNav {
+        display: block;
+    }
+
+        .hiddenNav li {
+            display: block;
+        }
+}
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-brand-hidden {
+        display: inline-block;
+    }
+
+    .mainLi {
+        margin-top: 1rem;
+    }
+
+    .hiddenNav, .aboutNav {
+        display: block;
+    }
+
+        .hiddenNav li {
+            display: block;
+        }
+}
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    .navbar-brand-hidden {
+        display: none;
+    }
+
+    .hiddenNav, .aboutNav {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-brand {
+        display: inline-block;
+    }
+
+    .navbar-brand-hidden {
+        display: none;
+    }
+
+    .hiddenNav, .aboutNav {
+        display: none;
+    }
+}

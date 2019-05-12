@@ -24,25 +24,70 @@
     <header>
         <!-- תפריט עליון קבוע -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNavBar">
-            <a class="navbar-brand" href="homePage.html">genChat<span class="sr-only">(current)</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="homePage.html">GenChat<span class="sr-only">(current)</span></a>
+            <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="nav-link" href="#chatWithH2">שיחה עם</a>
+                    <li class="mainLi">
+                        <a class="nav-link" id="changeable-link" href="homePage.html#chatWithH2">שיחה עם</a>
+                        <ul class="hiddenNav">
+                            <li>
+                                <a class="nav-link" href="‏‏‏‏chatAboutEmployment.html">תעסוקה</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="‏‏chatAboutRelationship.html">זוגיות ומיניות</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="chatAboutLonliness.html">בדידות</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="chatAboutSelfRealization.html">הגשמה עצמית</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="chatAboutLoss.html">אובדן</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="chatAboutFitness.html">כושר גופני</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="nav-link" href="#chatAboutH2">שיחה על</a>
+                    <li class="mainLi">
+                        <a class="nav-link" href="homePage.html#chatAboutH2">שיחה על</a>
+                        <ul class="hiddenNav">
+                            <li>
+                                <a class="nav-link" href="#">תעסוקה</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">זוגיות ומיניות</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">בדידות</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">הגשמה עצמית</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">אובדן</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">כושר גופני</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="mainLi">
                         <a class="nav-link" href="about.html">אודות</a>
                     </li>
                 </ul>
+                <p class="aboutNav">
+                    GenChat פותח בפקולטה לטכנולוגיות למידה
+                    <br />
+                    בשיתוף ג'וינט ישראל - אשל
+                <p />
             </div>
         </nav>
+        <a class="navbar-brand navbar-brand-hidden ml-3" href="homePage.html">GenChat</a>
     </header>
     <!-- הגדרת רספונסיביות -->
     <div id="container" class="container-fluid inner-page">
@@ -53,17 +98,27 @@
             <a href="chatPage.html" class="noEnter"><img src="images/sarah.jpg" alt="שרה" class="img-responsive" /></a>
         </div>
         <!-- מה אתם יודעים על אובדן? -->
-        <div class="about-the-subject">
+        <div class="text-block">
             <h2>מה אתם יודעים על אובדן?</h2>
         </div>
     </div>
     <!-- פוטר -->
-    <div class="footerNavBarDiv fixed-bottom">
+    <div class="footerNavBarDiv">
         <nav id="footerNavBar">
-            <ul>
-                <li><a href="homePage.html">GenChat</a></li> |
-                <li><a href=about.html>אודות</a></li>
-            </ul>
+            <div class="row no-gutters d-flex justify-content-center justify-content-md-between" style="direction:rtl;">
+                <div class="col-xs-6">
+                    <ul class="right-nav-footer m-0">
+                        <li><a href="homePage.html">GenChat</a></li> |
+                        <li><a href=about.html>אודות</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="left-nav-footer m-0">
+                        <li><a href="https://www.hit.ac.il/telem/overview" target="_blank"><img src="images/HIT.png" alt="קישור לאתר מכון טכנולוגי חולון - הפקולטה לטכנולוגיות למידה" /></a></li>
+                        <li><a href="http://www.eshelnet.org.il/" target="_blank"><img src="images/joint-logo.png" alt="קישור לאתר אשל - ג'וינט ישראל" /></a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </div>
 </body>

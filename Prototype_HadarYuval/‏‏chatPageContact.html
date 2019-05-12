@@ -10,8 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://unpkg.com/botui/build/botui.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/botui/build/botui-theme-default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="Styles/site.css" rel="stylesheet" />
     <link href="Styles/chatPage.css" rel="stylesheet" />
 
@@ -21,10 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
-    <script src="https://unpkg.com/botui/build/botui.min.js"></script>
     <script src="jScripts/site.js"></script>
-    <script src="jScripts/chatPage.js"></script>
-
 
 </head>
 <body id="chatPage">
@@ -37,38 +33,27 @@
     <!-- הגדרת רספונסיביות -->
     <div id="container" class="container-fluid">
         <div class="row sticky-top top-page">
-            <div class="col-md-3 chats-list-bar-header-col">
-                <div class="chats-list-bar-header d-none d-md-block">
+            <div class="col-12 chats-list-bar-header-col">
+                <div class="chats-list-bar-header">
                     <div class="row">
-                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <div class="col-1 d-flex align-items-center justify-content-center p-0">
                             <a href="homePage.html">
                                 <img class="chat-list-bar-back-img" src="images/arrow-circle-right-solid.svg" />
                             </a>
                         </div>
-                        <div class="col-md-10 justify-content-center">
+                        <div class="col-11 justify-content-center p-0">
                             <h2>צ'אטים פעילים</h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
-                <div class="media chat-head">
-                    <a href="homePage.html" class="hidden-back-arrow" style="margin-top: 1rem; display:none;">
-                        <img class="chat-list-bar-back-img" src="images/arrow-circle-right-solid.svg" />
-                    </a>
-                    <img src="images/shuka.jpg" class="mr-3 chat-list-container-bot-img" alt="שוקה">
-                    <div class="media-body">
-                        <h3 class="mt-0 text-right">שוקה</h3>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-md-3 chats-list-bar d-none d-md-block">
+            <div class="col-12 chats-list-bar">
                 <div class="row">
-                    <div class="col-md-12 chats-list-bar-body">
+                    <div class="col-12 chats-list-bar-body">
                         <div class="list-group chats-list-container">
-                            <a href="#" class="list-group-item list-group-item-action item-active">
+                            <a href="chatPage.html" class="list-group-item list-group-item-action item-active">
                                 <div class="media">
                                     <img src="images/shuka.jpg" class="mr-0 chat-list-container-bot-img" alt="שוקה">
                                     <div class="media-body">
@@ -125,24 +110,8 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="col-md-9 chat-window">
-                <div class="container" id="my-botui-app">
-                    <!-- Image and text -->
-                    <bot-ui></bot-ui>
-                </div>
             </div>
         </div>
-        <!--<div id="headChat">
-            <a href="/homePage.html"><img src="images/right-arrow.png" width="50"/></a>
-            <div class="detailsContact"><img src="images/shuka.jpg" id="contactImg" class="img-responsive" alt="שוקה"/></div>
-            <h2>שיחה עם שוקה</h2>
-        </div>
-        <div class="container" id="my-botui-app">-->
-        <!-- Image and text -->
-        <!--<bot-ui></bot-ui>
-        </div>-->
     </div>
 </body>
 </html>
