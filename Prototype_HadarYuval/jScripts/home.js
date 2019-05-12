@@ -5,17 +5,17 @@
     //תמונה מתחלפת בחלק העליון בהתאם לסליידר ראשי
     $("#carousel1").click(function () {
         console.log("carousel-back-1");
-        $("#topSection").css("background-image", "url(/images/shuka_banner.png");
+        $("#topSection").css("background-image", "url(https://github.com/Hadar-Bustenai/prototype/blob/master/Prototype_HadarYuval/images/shuka_banner.png");
     })
 
     $("#carousel2").click(function () {
         console.log("carousel-back-2");
-        $("#topSection").css("background-image", "url(/images/batya_banner.png");
+        $("#topSection").css("background-image", "url(https://github.com/Hadar-Bustenai/prototype/blob/master/Prototype_HadarYuval/images/batya_banner.png");
     })
 
     $("#carousel3").click(function () {
         console.log("carousel-back-3");
-        $("#topSection").css("background-image", "url(/images/eazy_banner.png");
+        $("#topSection").css("background-image", "url(https://github.com/Hadar-Bustenai/prototype/blob/master/Prototype_HadarYuval/images/eazy_banner.png");
     })
 
     $(".btn-play").click(function (e) {
