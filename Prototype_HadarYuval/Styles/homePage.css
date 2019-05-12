@@ -2,7 +2,7 @@
 
 /*קאבר חלק עליון*/
 #topSection {
-    background-image: url(prototype/Prototype_HadarYuval/images/shuka_banner.png);
+    background-image: url(https://hadar-bustenai.github.io/prototype/Prototype_HadarYuval/images/shuka_banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -227,7 +227,7 @@
 
     /*קאבר חלק עליון*/
     #topSection .container-fluid {
-        background-image: url(https://github.com/Hadar-Bustenai/prototype/blob/master/Prototype_HadarYuval/images/shuka_banner.png);
+        background-image: url(https://hadar-bustenai.github.io/prototype/Prototype_HadarYuval/images/shuka_banner.png);
         background-repeat: no-repeat;
         background-size: cover 10rem;
         background-position: top center;
