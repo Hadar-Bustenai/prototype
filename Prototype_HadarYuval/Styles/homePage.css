@@ -226,7 +226,7 @@
 @media only screen and (max-width: 600px) {
 
     /*קאבר חלק עליון*/
-    #topSection .container-fluid {
+    #topSection {
         background-image: url(https://hadar-bustenai.github.io/prototype/Prototype_HadarYuval/images/shuka_banner.png);
         background-repeat: no-repeat;
         background-size: cover 10rem;
