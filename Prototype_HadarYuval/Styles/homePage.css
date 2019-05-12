@@ -229,7 +229,7 @@
     #topSection {
         background-image: url(https://hadar-bustenai.github.io/prototype/Prototype_HadarYuval/images/shuka_banner.png);
         background-repeat: no-repeat;
-        background-size: cover 10rem;
+        background-size: cover, 72rem;
         background-position: top center;
         background-attachment: fixed;
         background-position-x: -10rem;
